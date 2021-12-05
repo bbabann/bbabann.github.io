@@ -51,14 +51,15 @@ export default defineComponent({
       y: 0,
       mouse: false,
       auto: true,
+      timer: null,
     })
 
     const drag = (offsetX, offsetY) => {
       state.auto = false
 
-      clearTimeout()
+      clearTimeout(state.timer)
 
-      setTimeout(() => {
+      state.timer = setTimeout(() => {
         state.auto = true
       }, 30000)
 
