@@ -61,7 +61,7 @@ export default defineComponent({
 
       state.timer = setTimeout(() => {
         state.auto = true
-      }, 30000)
+      }, 5000)
 
       if (offsetX > 0 || offsetY > 0) offsetX = 1
       else if (offsetX < 0 || offsetY < 0) offsetX = -1
