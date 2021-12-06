@@ -94,7 +94,7 @@ export default defineComponent({
 
       if (root.$route.params.p) {
         setInterval(() => {
-          if (state.auto) offset('X', Number(root.$route.params.p) / 100)
+          if (state.auto && !state.mouse) offset('X', Number(root.$route.params.p) / 100)
         }, 10)
       }
     })
